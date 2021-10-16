@@ -1,0 +1,26 @@
+﻿@model List<Persona>
+
+@{
+    ViewData["Title"] = "Elenco Persone";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Persone</h1>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Cognome</th>
+        </tr>
+        <tbody>
+            @foreach(Persona p in Model)
+            {
+                <tr>
+                    <td>@p.Id</td>
+                    <td>@p.Nome</td>
+                    <td>@p.Cognome</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
